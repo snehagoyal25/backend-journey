@@ -27,3 +27,9 @@ app.listen(PORT,()=>{
 
 // connect to the database
 const dbConnect = require("../config/database");
+dbConnect(); 
+
+// default route
+app.get("/",(req,res)=>{
+    res.send(`<h1>This is homepage <h1>`)
+});
