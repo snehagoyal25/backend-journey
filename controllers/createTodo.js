@@ -1,6 +1,6 @@
 // Import the model as we need schema that is the description
-const todo = require ("../models/Todo")
-u
+const Todo = require ("../models/Todo")
+
 // Define route handler 
 exports.createTodo = async(req,res)=>{
     try{

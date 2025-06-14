@@ -1,10 +1,10 @@
-const mongoose = require("mongoose ");
+const mongoose = require("mongoose");
 
  const todoSchema = new mongoose.Schema({
     title :{
         type: String,
         required : true,
-        maxLenght : 50,
+        maxLength : 50,
     },
 
     description : {
@@ -16,13 +16,13 @@ const mongoose = require("mongoose ");
     createdAt : {
         type : Date,
         required : true ,
-        default : date.now(),
+        default : Date.now,
     },
 
     updatedAt : {
         type : Date ,
         required : true ,
-        default : date.now(),
+        default : Date.now,
     }
  });
 
