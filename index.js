@@ -1,3 +1,4 @@
+// server instantiate 
 const express = require ("express");
 const app = express();
 
@@ -11,13 +12,13 @@ const app = express();
 require("dotenv").config();
 const PORT = process.env.PORT || 4000;
 
-// need middleware to parse jso request body
+// need middleware to parse json request body
 app.use(express.json());
 
 // import routes for TODO API 
 const todoRoutes = require("./routes/todos"); 
 
-// mount the todo API rountes 
+// mount(add) the todo API rountes 
 app.use("/api/v1",todoRoutes);
 
 // start server 
