@@ -20,6 +20,11 @@ const {title , description}= req.body ;
     }
 
     catch(err){
-
+        console.error(err);
+        res.status(500).json({
+            success: false ,
+            error:err.message,
+            message : "Server error ",
+        });
     }
 }
