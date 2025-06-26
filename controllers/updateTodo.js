@@ -3,19 +3,19 @@
 const Todo =require("../models/Todo")
 
 // Define route handler 
-expots.updateTodo = async(req,res)=>{
+exports.updateTodo = async(req,res)=>{
     try{
 // Extract title and description from the request body 
-const{id}= req.params
+const{id}= req.params;
 const {title , description}= req.body ;
         const todo = await Todo.findByIdAndUpdate(
             {_id:id},
             {title,description,updatedAt:Date.now()},
         ) 
         res.status(200).json({
-            success :  true,
+            success : true,
             data : todo,
-            message : `Updated Successfully `
+            message : "Updated Successfully "
         })
     }
 
